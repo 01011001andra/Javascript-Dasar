@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Of</title>
+</head>
+
+<body>
+  <script>
+
+    const names = ["Yandra", "D.", "Muslim"];
+    for (const name of names) {
+      document.writeln(`${name} <br>`)
+    }
+
+    const fullName = "Yandra Muslim";
+    for (const character of fullName) {
+      document.writeln(`<p>${character}</p>`)
+    }
+
+    // tidak bisa karena for of untuk value saja
+    // const person = {
+    //   firstName: "Yandra",
+    //   lastName: "Muslim"
+    // };
+    // for (const name of person) {
+    //   document.writeln(`<p>${person}</p>`);
+    // }
+
+  </script>
+</body>
+
+</html>

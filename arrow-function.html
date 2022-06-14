@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function</title>
+</head>
+
+<body>
+  <script>
+
+    // const sayHello = (name) => {
+    //   const say = `Hello ${name}`;
+    //   console.info(say);
+    // }
+
+    // shortcut
+    const sayHello = (name) => console.info(`Hello ${name}`);
+    sayHello("Yandra");
+
+    // const sum = (first, second) => {
+    //   return first + second;
+    // }
+
+    // shortcut
+    const sum = (first, second) => first + second;
+
+    console.info(sum(2, 2));
+
+    function giveMeName(callback) {
+      callback("Yandra");
+    }
+
+    // Anonymous Function
+    // giveMeName(function (name) {
+    //   console.info(`Hello ${name}`);
+    // })
+
+    // Arrow Function
+    giveMeName(name => console.info(`Hello ${name}`));
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

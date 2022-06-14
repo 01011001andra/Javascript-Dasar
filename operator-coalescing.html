@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=/, initial-scale=1.0">
+  <title>Operator Nullish Coalescing</title>
+</head>
+
+<body>
+  <script>
+
+    let parameter;
+
+    let data = parameter;
+    if (data === null || data === undefined) {
+      data = "Nilai Default";
+    }
+    document.writeln(`<p>${data}</p>`);
+
+    // Operator Coalescing untuk mengecek data null atau undefined
+
+    parameter = data ?? "Nilai Default";
+
+    document.writeln(`<p>${data}</p>`);
+
+  </script>
+</body>
+
+</html>

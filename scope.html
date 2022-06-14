@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope</title>
+</head>
+
+<body>
+  <script>
+
+    // Global scope
+    let counter = 0;
+
+
+    function hitMe() {
+      // local scope hitMe
+      counter++;
+    }
+    hitMe();
+    hitMe();
+    hitMe();
+
+    document.writeln(`${counter}`);
+
+    function first() {
+      let firstVariable = "First";
+
+      function firstNested() {
+        console.info(`Hi ${firstVariable}`);
+        const firstNestedVariable = "First Nested";
+      }
+      firstNested();
+      console.info(`${firstNestedVariable}`); // tidak bisa mengakses karna firstNestedVariable local scope
+    }
+    function second() {
+      let secondVariable = "Second";
+    }
+
+    first();
+    second();
+
+    // console.info(`${firstVariable}`); // gagal karna firstVariable ada di scope local function firstVariable  
+    // console.info(`${secondVariable}`); // gagal
+
+
+
+  </script>
+</body>
+
+</html>
